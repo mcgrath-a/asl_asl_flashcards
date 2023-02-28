@@ -1,4 +1,4 @@
-# asl_flashcards
+# ASL Flashcard App
 
 A new Flutter project.
 
