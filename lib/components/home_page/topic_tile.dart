@@ -10,19 +10,28 @@ class TopicTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: Colors.cyan,
-      ),
-      child: Column(
-        children: [
-          Expanded(
-            flex:2,
-              child: Text('images')),
-          Expanded(child: Text(topic)),
+    return GestureDetector(
+      onTap: (){
+        print('tile tapped $topic');
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          //color:  Color.fromARGB(255, 173, 217, 236),
+          color:  Theme.of(context).primaryColor,
+        ),
+        child: Column(
+          children: [
+            Expanded(
+              flex:2,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),//padding along images
+                  child: Image.asset('assets/images/$topic.png'),
+                )),
+            Expanded(child: Text(topic)),
 
-        ],
+          ],
+        ),
       ),
     );
   }

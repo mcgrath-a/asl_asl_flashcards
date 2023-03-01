@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         elevation: 0,
 
+
     ), //appbar
     body: Padding(
       padding:  EdgeInsets.only(left: widthPadding, right: widthPadding),
@@ -58,6 +59,7 @@ class _HomePageState extends State<HomePage> {
               background: Padding(
                 padding:  EdgeInsets.all(size.width * 0.1),
                 child: Text("home page image"),
+
               ),
             ),
           ),

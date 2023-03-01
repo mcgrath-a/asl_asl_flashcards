@@ -1,3 +1,4 @@
+import 'package:asl_flashcards/configs/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:asl_flashcards/pages/home_page.dart';
 void main() {
@@ -14,10 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
      // debugShowMaterialGrid: false,
       title: 'ASL Flashcards',
-      theme: ThemeData(
-
-        //primarySwatch: Colors.blue,
-      ),
+      theme: appTheme,
       home: const HomePage(),
     );
   }
