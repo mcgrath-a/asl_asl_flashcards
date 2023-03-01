@@ -1,4 +1,7 @@
+import 'package:asl_flashcards/components/home_page/topic_tile.dart';
 import 'package:flutter/material.dart';
+import '../data/signs.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,7 +11,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<String>_topics = [];
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    for(var t in signs){
+      if (!_topics.contains(t.topic)){ //if it doesnt alreadt contain topic then add it
+        _topics.add(t.topic);
+      }
+      _topics.sort();
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +50,7 @@ class _HomePageState extends State<HomePage> {
       padding:  EdgeInsets.only(left: widthPadding, right: widthPadding),
 
       child: CustomScrollView(
+
         slivers: [
            SliverAppBar(
             expandedHeight:  size.height * 0.40,
@@ -52,13 +68,14 @@ class _HomePageState extends State<HomePage> {
                 mainAxisSpacing: 6,
           ),
             delegate: SliverChildBuilderDelegate(
+              childCount: _topics.length,
                   (BuildContext context, index) {
-                    return Container(
-                      color: Colors.red,
-                    );
+                    return TopicTile(topic: _topics[index]);
                   },
+
           )
           ),
+
       ],
     )
     )
@@ -67,3 +84,4 @@ class _HomePageState extends State<HomePage> {
 
   }
 }
+
