@@ -12,8 +12,16 @@ final appTheme = ThemeData(
       fontSize: 18, //google fonts to choose fonts
       fontFamily: GoogleFonts.rubik().fontFamily
     )
-
-  )
+  ),
+appBarTheme: AppBarTheme(
+  titleTextStyle: TextStyle(
+      fontFamily: GoogleFonts.rubik().fontFamily,
+      fontSize: 20,
+    fontWeight: FontWeight.bold,
+  ),
+      color: kBlue,
+),
+    scaffoldBackgroundColor: klightBlue,
 
 
 

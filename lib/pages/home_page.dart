@@ -1,4 +1,5 @@
 import 'package:asl_flashcards/components/home_page/topic_tile.dart';
+import 'package:asl_flashcards/configs/constants.dart';
 import 'package:flutter/material.dart';
 import '../data/signs.dart';
 
@@ -41,7 +42,28 @@ class _HomePageState extends State<HomePage> {
           )
         ),
         toolbarHeight: size.height * 0.15,
-        title: Text('American Sign Language Flashcards'), //title that appears at top of screem
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              children: [
+                SizedBox(
+                  width: size.width *kIconPadding,
+                  child: Image.asset('assets/images/Settings.png'),),
+                SizedBox(height: size.width*kIconPadding,)
+              ],
+            ),
+            Text('American Sign Language\nFlashcards' , textAlign: TextAlign.center,),
+            Column(
+              children: [
+                SizedBox(
+                    width: size.width * kIconPadding,
+                    child: Image.asset('assets/images/Review.png'),),
+                SizedBox(height: size.width*kIconPadding,)
+              ],
+            ),
+          ],
+        ), //title that appears at top of screem
         centerTitle: true,
         elevation: 0,
 
@@ -54,15 +76,20 @@ class _HomePageState extends State<HomePage> {
 
         slivers: [
            SliverAppBar(
+             backgroundColor: Theme.of(context).scaffoldBackgroundColor,
             expandedHeight:  size.height * 0.40,
             flexibleSpace: FlexibleSpaceBar(
               background: Padding(
                 padding:  EdgeInsets.all(size.width * 0.1),
-                child: Text("home page image"),
+                child: Transform.scale(
+                  scale: 1.75, // resizing image
+                  child: Image.asset('assets/images/background2.png'),
+                  ),
+                ),
 
               ),
             ),
-          ),
+
           SliverGrid(
             gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
