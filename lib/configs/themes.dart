@@ -10,14 +10,15 @@ final appTheme = ThemeData(
     bodyMedium:TextStyle(
       color: Colors.white,
       fontSize: 18, //google fonts to choose fonts
-      fontFamily: GoogleFonts.rubik().fontFamily
+      fontFamily: GoogleFonts.poppins().fontFamily
     )
   ),
 appBarTheme: AppBarTheme(
   titleTextStyle: TextStyle(
-      fontFamily: GoogleFonts.rubik().fontFamily,
-      fontSize: 20,
-    fontWeight: FontWeight.bold,
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      fontSize: 20.5,
+      fontWeight: FontWeight.bold,
+
   ),
       color: kBlue,
 ),
