@@ -14,6 +14,8 @@ final appTheme = ThemeData(
     )
   ),
 appBarTheme: AppBarTheme(
+  elevation: 0,
+  centerTitle: true,
   titleTextStyle: TextStyle(
       fontFamily: GoogleFonts.poppins().fontFamily,
       fontSize: 20.5,

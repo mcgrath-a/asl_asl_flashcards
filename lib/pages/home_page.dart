@@ -72,8 +72,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           //title that appears at top of screem
-          centerTitle: true,
-          elevation: 0,
+
         ), //appbar
         body: Padding(
             padding: EdgeInsets.only(left: widthPadding, right: widthPadding),
