@@ -1,6 +1,9 @@
+//import 'package:flutter/material.dart';
 import '../models/sign.dart';
 
 final List<Sign> signs = [
+//add image like below:
+  // image:'assets/images/Settings.png')
 
   Sign(topic: "Beach", english: "Swimsuit", sign: "SWIM-CLOTHES", description: "Swimsuit is a compound sign: first, sign swim, then sign clothes"),
   Sign(topic: "Beach", english: "Seashell", sign: "BEACH-SHELL", description: "Seashell is a compound sign: first, sign beach, then sign shell (can be done 2 ways)"),
