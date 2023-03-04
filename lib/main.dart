@@ -1,8 +1,15 @@
 import 'package:asl_flashcards/configs/themes.dart';
+import 'package:asl_flashcards/notifiers/flashcards_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:asl_flashcards/pages/home_page.dart';
+import 'package:provider/provider.dart';
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => FlashcardsNotifier())
+      //read values, update values and listen values
+    ],
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

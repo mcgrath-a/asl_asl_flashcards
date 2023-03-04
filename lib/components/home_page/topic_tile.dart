@@ -1,3 +1,4 @@
+import 'package:asl_flashcards/utils/methods.dart';
 import 'package:flutter/material.dart';
 import '../../animations/fade_in_animation.dart';
 
@@ -15,6 +16,7 @@ class TopicTile extends StatelessWidget {
       child: GestureDetector(
         onTap: (){
           print('tile tapped $topic');
+          loadSession(context: context, topic: topic);
         },
         child: Container(
           decoration: BoxDecoration(
